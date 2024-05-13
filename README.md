@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and using GraphQL for data fetching from a headless [Wordpress](https://wordpress.com) CMS.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and using [GraphQL](https://graphql.org) for data fetching from a headless [Wordpress](https://wordpress.org) CMS using [WPGraphQL](https://www.wpgraphql.com).
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pages will auto-update as you make edits.
 
 ## Learn More
 
