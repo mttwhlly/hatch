@@ -10,8 +10,8 @@ export default async function Header() {
   return (
     <header>
       <div>
-        <h1 className="mb-0">Next.js WordPress</h1>
-        <p>It&apos;s Headless WordPress</p>
+        <h1 className="mb-0">Hatch Creatives</h1>
+        <p>Here there every-dang-where</p>
       </div>
       <nav className="flex justify-between gap-4">
         {!!menu &&
