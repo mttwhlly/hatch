@@ -17,6 +17,19 @@ export interface SearchResults {
   
   export interface Menu {
     menuItems: {
+      nodes: [
+        {
+          id: string
+          databaseId: string
+          title: string
+          url: string
+          description: string
+          label: string
+          linkRelationship: string
+          target: string
+          parentId: string
+        }
+      ],
       edges: [
         {
           node: {

@@ -12,10 +12,12 @@ import { notFound } from "next/navigation";
  */
 export default async function Home() {
   // Fetch homepage from WordPress.
-  const homepage = await getPageBySlug("homepage");
+  const homepage = await getPageBySlug("/");
 
   // Fetch posts from WordPress.
   const posts = await getAllPosts();
+
+  console.log("homepage is: ", homepage);
 
   // No data? Bail...
   if (!posts || !posts.length || !homepage) {

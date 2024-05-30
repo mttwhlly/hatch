@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import config from "@/lib/config";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
@@ -32,15 +30,19 @@ export const viewport: Viewport = {
  */
 export default function RootLayout({
   children,
+  header,
+  footer,
 }: {
   children: React.ReactNode;
+  header: React.ReactNode;
+  footer: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
-        <Header />
+        {header}
         {children}
-        <Footer />
+        {footer}
       </body>
     </html>
   );
