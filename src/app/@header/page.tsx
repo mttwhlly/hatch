@@ -11,7 +11,6 @@ export default async function Header() {
     <header>
       <div>
         <h1 className="mb-0">Hatch Creatives</h1>
-        <p>Here there every-dang-where</p>
       </div>
       <nav className="flex justify-between gap-4">
         {!!menu &&
