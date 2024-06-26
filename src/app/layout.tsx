@@ -1,6 +1,14 @@
 import config from "@/lib/config";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Libre_Baskerville } from "next/font/google";
+
+const baskerville = Libre_Baskerville({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-libre-baskerville",
+});
 
 /**
  * Setup metadata.
@@ -38,8 +46,8 @@ export default function RootLayout({
   footer: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${baskerville.variable}`}>
+      <body className="font-serif">
         {header}
         {children}
         {footer}
