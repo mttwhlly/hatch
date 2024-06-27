@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['var(--font-outfit)'],
         serif: ['var(--font-libre-baskerville)'],
       },
       colors: {
@@ -26,6 +27,9 @@ const config: Config = {
           800: "#b6524e",
           900: "#631f1e",
         },
+        tan: {
+          default: "#F1EAE4"
+        }
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
