@@ -1,13 +1,13 @@
 import config from "@/lib/config";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Libre_Baskerville, Outfit } from "next/font/google";
+import { STIX_Two_Text, Outfit } from "next/font/google";
 
-const baskerville = Libre_Baskerville({
-  weight: ["400", "700"],
+const stix = STIX_Two_Text({
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-libre-baskerville",
+  variable: "--font-stix-two-text",
 });
 
 const outfit = Outfit({
@@ -53,7 +53,7 @@ export default function RootLayout({
   footer: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${baskerville.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${stix.variable} ${outfit.variable}`}>
       <body className="font-serif">
         {header}
         {children}
