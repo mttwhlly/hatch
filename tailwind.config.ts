@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-outfit)'],
+        sans: ['var(--font-jost)'],
         serif: ['var(--font-stix-two-text)'],
       },
       colors: {
@@ -53,6 +53,7 @@ const config: Config = {
           950: "#130A06",
         },
       },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

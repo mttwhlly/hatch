@@ -1,7 +1,7 @@
 import config from "@/lib/config";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { STIX_Two_Text, Outfit } from "next/font/google";
+import { STIX_Two_Text, Jost } from "next/font/google";
 
 const stix = STIX_Two_Text({
   weight: ["400", "500", "600", "700"],
@@ -10,11 +10,11 @@ const stix = STIX_Two_Text({
   variable: "--font-stix-two-text",
 });
 
-const outfit = Outfit({
-  weight: ["400", "700"],
-  style: ["normal"],
+const jost = Jost({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-jost",
 });
 
 /**
@@ -53,7 +53,7 @@ export default function RootLayout({
   footer: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${stix.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${stix.variable} ${jost.variable}`}>
       <body className="font-serif">
         {header}
         {children}
