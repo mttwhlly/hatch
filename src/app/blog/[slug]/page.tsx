@@ -233,12 +233,17 @@ async function Post({ params }: { params: { slug: string } }) {
             </div>
           </div>
 
-          <footer className="flex items-center justify-between gap-4 pb-4">
+          <footer className="flex flex-col justify-between gap-4 pb-4 max-w-2xl mx-auto">
             <div>
-              <h3>Categories</h3>
+              <h3 className="font-sans font-medium text-neutral-400 uppercase text-xs tracking-wide mb-2">
+                Categories
+              </h3>
               <ul className="m-0 flex list-none gap-2 p-0">
                 {post.categories.nodes.map((category) => (
-                  <li className="m-0 p-0" key={category.databaseId}>
+                  <li
+                    className="m-0 p-0 bg-blue-100 px-5 py-1 mr-2 italic font-medium text-blue-500 text-base"
+                    key={category.databaseId}
+                  >
                     <Link href={`/blog/category/${category.name}`}>
                       {category.name}
                     </Link>
@@ -248,7 +253,9 @@ async function Post({ params }: { params: { slug: string } }) {
             </div>
 
             <div>
-              <h3>Tags</h3>
+              <h3 className="font-sans font-medium text-neutral-400 uppercase text-xs tracking-wide mb-2">
+                Tags
+              </h3>
               <ul className="m-0 flex list-none gap-2 p-0">
                 {post.tags.nodes.map((tag) => (
                   <li className="m-0 p-0" key={tag.databaseId}>
@@ -258,16 +265,19 @@ async function Post({ params }: { params: { slug: string } }) {
               </ul>
             </div>
           </footer>
-          <section className="border-t-2">
-            <h3>Comments</h3>
+          <section className="border-t-1 max-w-2xl mx-auto">
+            <h3 className="font-sans font-medium text-neutral-400 uppercase text-xs tracking-wide mb-2">
+              Comments
+            </h3>
             {post.comments.nodes.map((comment) => (
               <article key={comment.databaseId}>
                 <header className="flex items-center gap-2">
-                  <img
+                  <Image
                     alt={comment.author.node.name}
                     className="m-0 rounded-full"
                     height={64}
                     loading="lazy"
+                    objectFit="cover"
                     src={comment.author.node.avatar.url}
                     width={64}
                   />
