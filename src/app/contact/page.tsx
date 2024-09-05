@@ -42,7 +42,7 @@ export default async function Contact() {
   return (
     <main className="flex-1">
       {/* Hero section */}
-      <section className="h-[200px] md:h-[300px] lg:h-[540px] relative flex items-center justify-center">
+      <section className="h-[200px] md:h-[300px] lg:h-[540px] relative flex items-center justify-center mt-20">
         <Image
           src="/hero.jpg"
           alt="Hero background"
