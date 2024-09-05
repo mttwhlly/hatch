@@ -4,6 +4,7 @@ import { Page, Post } from "@/lib/types";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 /**
  * Fetches data from WordPress.
@@ -51,28 +52,70 @@ function RenderPostsList({
   context: string;
 }) {
   return (
-    <main className="flex flex-col gap-8">
-      <h1 className="capitalize">Latest {context}</h1>
-      <div className="flex flex-wrap gap-8">
+    <main className="flex flex-col">
+      {/* Hero section */}
+      <section className="h-[200px] md:h-[300px] lg:h-[540px] relative flex items-center justify-center">
+        <Image
+          src="/hero.jpg"
+          alt="Hero background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          sizes="100vw"
+          priority
+        />
+        {/* <div className="relative z-10 text-center text-white">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl mb-4">
+            Welcome to Our Website
+          </h1>
+          <p className="mx-auto max-w-[700px] text-xl mb-8">
+            Discover amazing features and services that will transform your
+            experience.
+          </p>
+          <div className="space-x-4">
+            <Button
+              variant="outline"
+              className="bg-white text-black hover:bg-gray-200"
+            >
+              Get Started
+            </Button>
+            <Button
+              variant="outline"
+              className="text-white border-white hover:bg-white hover:text-black"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div> */}
+      </section>
+      <h1 className="capitalize text-center text-4xl my-6">Latest {context}</h1>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto px-8">
         {posts.map((post: Post) => (
-          <article className="w-72" key={post.databaseId}>
-            <Image
-              alt={post.featuredImage.node.altText}
-              height={post.featuredImage.node.mediaDetails.height}
-              src={post.featuredImage.node.sourceUrl}
-              width={post.featuredImage.node.mediaDetails.width}
-              priority={true}
-            />
+          <article
+            className="w-full pb-6 text-center text-pretty"
+            key={post.databaseId}
+          >
+            <div>
+              <AspectRatio ratio={1 / 1}>
+                <Image
+                  alt={post.featuredImage.node.altText}
+                  layout="fill"
+                  objectFit="cover"
+                  src={post.featuredImage.node.sourceUrl}
+                  priority={true}
+                />
+              </AspectRatio>
+            </div>
             <Link href={`/${context}/${post.slug}`}>
               <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
             </Link>
-            <p className="text-sm text-gray-500">
+            {/* <p className="text-sm text-gray-500">
               {post.commentCount} Comments
-            </p>
-            <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-            <Link className="button" href={`/${context}/${post.slug}`}>
+            </p> */}
+            {/* <div dangerouslySetInnerHTML={{ __html: post.excerpt }} /> */}
+            {/* <Link className="button" href={`/${context}/${post.slug}`}>
               View Post
-            </Link>
+            </Link> */}
           </article>
         ))}
       </div>

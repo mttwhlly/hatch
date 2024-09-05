@@ -91,7 +91,6 @@ export default async function About() {
         </div>
       </article>
 
-      {/* Horizontally scrollable cards */}
       <section className="py-12 bg-muted">
         <div className="max-w-4xl mx-auto container px-4 md:px-6">
           <div className="flex space-x-4">
@@ -130,7 +129,6 @@ export default async function About() {
                 </p>
               </CardContent>
             </Card>
-
             <Card className="w-[300px] h-[300px] text-wrap text-sm bg-yellow-200">
               <CardHeader>
                 <div className="flex flex-col items-center space-y-4 pb-4">
@@ -155,122 +153,33 @@ export default async function About() {
 
       <section className="max-w-4xl mx-auto my-14 container px-4 md:px-6">
         <Card className="w-full text-wrap text-sm bg-brown-300 flex flex-col md:flex-row">
-          <AspectRatio ratio={16 / 9}>
-            <Image
-              src="/hero.jpg"
-              alt="Hero background"
-              layout="fill"
-              sizes="100vw"
-              objectFit="cover"
-            />
-          </AspectRatio>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center md:w-1/3">
             <CardHeader>
               <CardTitle className="tracking-tight text-3xl font-light text-center text-brown-900">
-                let’s get together <br />{" "}
-                <span className="italic">yeah, yeah, yeah</span>
+                origin story
               </CardTitle>
-              <CardDescription className="text-wrap text-center text-brown-800">
-                We learn new skills, ask for and offer support, and stoke the
-                passions inside us.
-              </CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-center">
-              <Button className="font-normal tracking-widest bg-brown-700">
-                Upcoming Meetups
-              </Button>
+              Hatch Creatives began in 2018 with the goal of creating monthly
+              events for women to gather and connect in South Florida. Many gals
+              volunteered their hearts, hands, and minds to put on these
+              frequent events. In 2019, Hatch expanded it's reach to a blog and
+              continues to be shaped by the growing needs of the Hatch gal
+              community.
             </CardContent>
           </div>
-        </Card>
-      </section>
-
-      <aside className="bg-yellow-200 mt-8 py-8">
-        <div className="max-w-4xl mx-auto container px-4">
-          <div className="max-w-4xl mx-auto">
-            <ScrollArea className="w-full whitespace-nowrap">
-              <div className="flex w-max space-x-4 px-2 py-8">
-                {posts.map((post: Post, i) => (
-                  <Card key={i} className="w-full text-wrap text-sm">
-                    <AspectRatio ratio={16 / 9}>
-                      <Image
-                        alt={post.featuredImage.node.altText}
-                        layout="fill"
-                        sizes="400px"
-                        objectFit="cover"
-                        src={post.featuredImage.node.sourceUrl}
-                        priority={true}
-                      />
-                    </AspectRatio>
-                    <CardHeader className="text-base hover:underline p-3">
-                      <Link href={`/blog/${post.slug}`}>
-                        <h2
-                          className="text-lg font-semibold tracking-tight mb-4 text-pretty"
-                          dangerouslySetInnerHTML={{ __html: post.title }}
-                        />
-                      </Link>
-                    </CardHeader>
-                    <CardContent className="text-sm p-3 text-gray-500">
-                      <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              <ScrollBar orientation="horizontal" />
-            </ScrollArea>
-          </div>
-        </div>
-      </aside>
-
-      {/* Email signup form */}
-      <section className="w-full py-12">
-        <div className="max-w-4xl mx-auto container py-8 px-4 md:px-6 bg-brown-300">
-          <div className="flex flex-col items-center space-y-4 pb-4">
-            <MailOpen size={64} strokeWidth={1} color="white" />
-          </div>
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <h2 className="text-3xl font-light tracking-tight text-brown-900">
-              Subscribe to Our Newsletter
-            </h2>
-            <p className="text-brown-800">no spam ever. we promise.</p>
-            <div className="flex w-full max-w-sm items-center">
-              <Input
-                className="border-none"
-                type="email"
-                placeholder="Enter your email"
+          <div className="flex flex-col justify-center md:w-2/3">
+            <AspectRatio ratio={4 / 3}>
+              <Image
+                src="/hero.jpg"
+                alt="Hero background"
+                layout="fill"
+                sizes="100vw"
+                objectFit="cover"
               />
-              <Button
-                className="font-normal tracking-widest bg-brown-900"
-                type="submit"
-              >
-                Subscribe
-              </Button>
-            </div>
+            </AspectRatio>
           </div>
-        </div>
-      </section>
-
-      {/* Instagram feed */}
-      <InstaFeed />
-      <section className="">
-        {/* <h2 className="text-2xl font-bold tracking-tighter mb-4">
-            Follow us on Instagram
-          </h2> */}
-        <ScrollArea className="w-full whitespace-nowrap">
-          <div className="flex w-max">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
-              <div key={i} className="w-[180px] h-[180px] relative">
-                <Image
-                  src={`/hero.jpg`}
-                  alt={`Instagram post ${i}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            ))}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+        </Card>
       </section>
     </main>
   );

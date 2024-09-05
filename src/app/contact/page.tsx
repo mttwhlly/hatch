@@ -220,58 +220,6 @@ export default async function Contact() {
           </div>
         </div>
       </aside>
-
-      {/* Email signup form */}
-      <section className="w-full py-12">
-        <div className="max-w-4xl mx-auto container py-8 px-4 md:px-6 bg-brown-300">
-          <div className="flex flex-col items-center space-y-4 pb-4">
-            <MailOpen size={64} strokeWidth={1} color="white" />
-          </div>
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <h2 className="text-3xl font-light tracking-tight text-brown-900">
-              Subscribe to Our Newsletter
-            </h2>
-            <p className="text-brown-800">no spam ever. we promise.</p>
-            <div className="flex w-full max-w-sm items-center">
-              <Input
-                className="border-none"
-                type="email"
-                placeholder="Enter your email"
-              />
-              <Button
-                className="font-normal tracking-widest bg-brown-900"
-                type="submit"
-              >
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Instagram feed */}
-      <InstaFeed />
-      <section className="">
-        {/* <h2 className="text-2xl font-bold tracking-tighter mb-4">
-            Follow us on Instagram
-          </h2> */}
-        <ScrollArea className="w-full whitespace-nowrap">
-          <div className="flex w-max">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
-              <div key={i} className="w-[180px] h-[180px] relative">
-                <Image
-                  src={`/hero.jpg`}
-                  alt={`Instagram post ${i}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className=""
-                />
-              </div>
-            ))}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-      </section>
     </main>
   );
 }
