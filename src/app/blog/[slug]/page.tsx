@@ -63,13 +63,18 @@ async function Post({ params }: { params: { slug: string } }) {
     notFound();
   }
 
+  console.log(post);
+
   const date = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 
+  const categories = post.categories.nodes.map((category) => category.name);
   const excerpt = post.excerpt ? post.excerpt?.replace(/<[^>]*>?/gm, "") : "";
+
+  console.log(categories);
 
   return (
     <div className="block text-pretty antialiased">
@@ -117,7 +122,7 @@ async function Post({ params }: { params: { slug: string } }) {
                               <a href="/" rel="noopener">
                                 <div>
                                   <div
-                                    className="inline-block"
+                                    className="inline-block align-middle"
                                     aria-hidden="false"
                                     aria-describedby="1"
                                     aria-labelledby="1"
@@ -125,13 +130,24 @@ async function Post({ params }: { params: { slug: string } }) {
                                     <div className="block w-12 h-12 rounded-full border-2 border-white z-0">
                                       <div className="block relative">
                                         {/* TODO: fallback avatar (with hatch logo?) */}
-                                        <img
+                                        {/* <img
                                           alt={post.author.node.name}
                                           className="block box-border rounded-full h-11 w-11 bg-grey"
                                           src="https://miro.medium.com/v2/resize:fill:88:88/1*K9Pu4PadoV2mMqHoH-AKyQ.png"
                                           width="44"
                                           height="44"
                                           loading="lazy"
+                                        /> */}
+                                        <Image
+                                          alt={post.author.node.name}
+                                          className="block box-border rounded-full h-11 w-11 bg-grey"
+                                          src={
+                                            post.author.node.avatar !== null
+                                              ? post.author.node.avatar.url
+                                              : "/avatar.png"
+                                          }
+                                          width="44"
+                                          height="44"
                                         />
                                         <div className="shadow-none rounded-full block h-11 w-11 absolute top-0 border-1 hover:bg-transparent"></div>
                                       </div>
