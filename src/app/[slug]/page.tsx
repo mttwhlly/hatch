@@ -91,10 +91,7 @@ function RenderPostsList({
       <h1 className="capitalize text-center text-4xl my-6">Latest {context}</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto px-8">
         {posts.map((post: Post) => (
-          <article
-            className="w-full pb-6 text-center text-pretty"
-            key={post.databaseId}
-          >
+          <article className="w-full pb-6 text-pretty" key={post.databaseId}>
             <div>
               <AspectRatio ratio={1 / 1}>
                 <Image
@@ -107,8 +104,18 @@ function RenderPostsList({
               </AspectRatio>
             </div>
             <Link href={`/${context}/${post.slug}`}>
-              <h2 dangerouslySetInnerHTML={{ __html: post.title }} />
+              <h2
+                dangerouslySetInnerHTML={{ __html: post.title }}
+                className="tracking-normal leading-tight pt-2"
+              />
             </Link>
+            <p className="text-sm text-gray-500 italic">
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
             {/* <p className="text-sm text-gray-500">
               {post.commentCount} Comments
             </p> */}
