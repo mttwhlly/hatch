@@ -10,7 +10,7 @@ export default async function Header() {
   const menu = await getHeaderMenuById("dGVybToz");
 
   return (
-    <header className="w-full">
+    <header className="w-full fixed z-20 top-0 bg-white">
       <div className="pt-4">
         <div className="flex justify-center mb-4">
           <Link href="/">
