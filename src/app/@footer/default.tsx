@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import InstaFeed from "@/components/instafeed";
-import { MailOpen } from "lucide-react";
+import { MailOpen, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -118,13 +118,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col mx-0 my-4 gap-2 w-full md:w-1/2">
               <Link className="h-6 hover:underline" href="/else">
-                Something Else
-              </Link>
-              <Link className="h-6 hover:underline" href="/else">
-                Something Else
-              </Link>
-              <Link className="h-6 hover:underline" href="/else">
-                Something Else
+                <Instagram strokeWidth={1.5} height={18} />
               </Link>
             </div>
           </div>

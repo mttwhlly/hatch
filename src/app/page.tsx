@@ -4,21 +4,16 @@ import { Post } from "@/lib/types";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Date from "@/components/date";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Input } from "@/components/ui/input";
-import InstaFeed from "@/components/instafeed";
-import { Heart, HandHeart, HeartHandshake, MailOpen } from "lucide-react";
 
 /**
  * The homepage route.
