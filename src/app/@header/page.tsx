@@ -10,7 +10,7 @@ export default async function Header() {
   const menu = await getHeaderMenuById("dGVybToz");
 
   return (
-    <header className="w-full fixed z-20 bg-white">
+    <header className="w-full fixed z-20 top-0 bg-white">
       <div className="pt-4">
         <div className="flex justify-center mb-4">
           <Link href="/">
@@ -44,7 +44,7 @@ export default async function Header() {
             <div className="p-2 inline-block">
               <Link
                 href="/about"
-                className="font-sans uppercase hover:underline"
+                className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
               >
                 About
               </Link>
@@ -52,7 +52,7 @@ export default async function Header() {
             <div className=" p-2 inline-block">
               <Link
                 href="/community"
-                className="font-sans uppercase hover:underline"
+                className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
               >
                 Community
               </Link>
@@ -60,7 +60,7 @@ export default async function Header() {
             <div className=" p-2 inline-block">
               <Link
                 href="/career-resources"
-                className="font-sans uppercase hover:underline"
+                className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
               >
                 Career&nbsp;Resources
               </Link>
@@ -68,7 +68,7 @@ export default async function Header() {
             <div className=" p-2 inline-block">
               <Link
                 href="/blog"
-                className="font-sans uppercase hover:underline"
+                className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
               >
                 Blog
               </Link>
@@ -76,7 +76,7 @@ export default async function Header() {
             <div className=" p-2 inline-block">
               <Link
                 href="/contact"
-                className="font-sans uppercase hover:underline"
+                className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
               >
                 Contact
               </Link>
