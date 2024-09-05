@@ -52,127 +52,37 @@ export default async function Home() {
           sizes="100vw"
           priority
         />
-        {/* <div className="relative z-10 text-center text-white">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl mb-4">
-            Welcome to Our Website
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-4xl font-extralight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-4">
+            hey, hatch gal
           </h1>
-          <p className="mx-auto max-w-[700px] text-xl mb-8">
-            Discover amazing features and services that will transform your
-            experience.
-          </p>
-          <div className="space-x-4">
-            <Button
-              variant="outline"
-              className="bg-white text-black hover:bg-gray-200"
-            >
-              Get Started
-            </Button>
-            <Button
-              variant="outline"
-              className="text-white border-white hover:bg-white hover:text-black"
-            >
-              Learn More
-            </Button>
-          </div>
-        </div> */}
-      </section>
-
-      <article>
-        <div className="max-w-2xl mx-auto my-3 container px-4 md:px-6 py-12">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-center tracking-tight leading-normal font-normal p-2 text-neutral-700">
-            we’re <span className="italic">hatch gals</span>
-          </h1>
-          <p className="text-center text-lg py-3 text-pretty text-neutral-700">
-            Hatch Creatives provides space and opportunities for gals to come
-            together as friends, coworkers and community members.
-          </p>
-          {/* <h1 dangerouslySetInnerHTML={{ __html: homepage.title }} />
-          <div dangerouslySetInnerHTML={{ __html: homepage.content }} /> */}
-        </div>
-      </article>
-
-      {/* Horizontally scrollable cards */}
-      <section className="py-12 bg-muted">
-        <div className="max-w-4xl mx-auto container px-4 md:px-6">
-          <div className="flex space-x-4">
-            <Card className="w-[300px] h-[300px] text-wrap text-sm bg-brown-200">
-              <CardHeader>
-                <div className="flex flex-col items-center space-y-4 pb-4">
-                  <Heart size={64} strokeWidth={1} color="white" />
-                </div>
-                <CardTitle className="text-lg tracking-normal text-center text-brown-900">
-                  encouragement
-                </CardTitle>
-                <CardDescription className="text-wrap text-center text-brown-800"></CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm text-center text-brown-800">
-                <p>
-                  We learn new skills, ask for and offer support, and stoke the
-                  passions inside us. We celebrate and cheer on the steps and
-                  successes of others.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="w-[300px] h-[300px] text-wrap text-sm bg-blue-200">
-              <CardHeader>
-                <div className="flex flex-col items-center space-y-4 pb-4">
-                  <HandHeart size={64} strokeWidth={1} color="white" />
-                </div>
-                <CardTitle className="text-lg tracking-normal text-center text-blue-900">
-                  collaboration
-                </CardTitle>
-                <CardDescription className="text-wrap text-center text-blue-800"></CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm text-center text-blue-800">
-                <p>
-                  We engage with other women and discover opportunities to
-                  collaborate in new and innovative ventures.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="w-[300px] h-[300px] text-wrap text-sm bg-yellow-200">
-              <CardHeader>
-                <div className="flex flex-col items-center space-y-4 pb-4">
-                  <HeartHandshake size={64} strokeWidth={1} color="white" />
-                </div>
-                <CardTitle className="text-lg tracking-normal text-center text-yellow-900">
-                  accountability
-                </CardTitle>
-                <CardDescription className="text-wrap text-center text-yellow-800"></CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm text-center text-yellow-800">
-                <p>
-                  We seek accountability in order to bring our dreams and
-                  ambitions to their full potential. We come alongside each
-                  other as friends, mentors, and project partners.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto my-14 container px-4 md:px-6">
         <Card className="w-full text-wrap text-sm bg-brown-300 flex flex-col md:flex-row">
-          <AspectRatio ratio={16 / 9}>
-            <Image
-              src="/hero.jpg"
-              alt="Hero background"
-              layout="fill"
-              sizes="100vw"
-              objectFit="cover"
-            />
-          </AspectRatio>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center md:w-1/2">
+            <AspectRatio ratio={3 / 2}>
+              <Image
+                src="/hero.jpg"
+                alt="Hero background"
+                layout="fill"
+                sizes="100vw"
+                objectFit="cover"
+              />
+            </AspectRatio>
+          </div>
+          <div className="flex flex-col justify-center md:w-1/2">
             <CardHeader>
               <CardTitle className="tracking-tight text-3xl font-light text-center text-brown-900">
                 let’s get together <br />{" "}
                 <span className="italic">yeah, yeah, yeah</span>
               </CardTitle>
               <CardDescription className="text-wrap text-center text-brown-800">
-                We learn new skills, ask for and offer support, and stoke the
-                passions inside us.
+                Hatch Creatives is a community of women connecting globally and
+                gathering locally to support, celebrate and create lives we
+                love. Hatch provides space for gals to come together as friends,
+                colleagues and community members.
               </CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-center">
@@ -184,14 +94,76 @@ export default async function Home() {
         </Card>
       </section>
 
-      <aside className="bg-yellow-200 mt-8 py-8">
+      <section className="max-w-4xl mx-auto my-14 container px-4 md:px-6 flex flex-col md:flex-row gap-4">
+        <Card className="w-full text-wrap text-sm bg-blue-300 flex flex-col">
+          <div className="flex flex-col justify-center md:w-full">
+            <CardHeader>
+              <CardTitle className="tracking-tight text-3xl font-light text-center text-blue-900 text-pretty">
+                looking to take the <span className="italic">next step</span> in
+                your career?
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-center">
+              <Button className="font-normal tracking-widest bg-blue-700">
+                Job Board
+              </Button>
+            </CardContent>
+          </div>
+          <div className="md:w-full">
+            <AspectRatio ratio={4 / 3}>
+              <Image
+                src="/hero.jpg"
+                alt="Hero background"
+                layout="fill"
+                sizes="100vw"
+                objectFit="cover"
+              />
+            </AspectRatio>
+          </div>
+        </Card>
+        <Card className="w-full text-wrap text-sm bg-blue-100 flex flex-col">
+          <div className="flex flex-col justify-center md:w-full">
+            <CardHeader>
+              <CardTitle className="tracking-tight text-3xl font-light text-center text-blue-900 text-pretty">
+                share your <span className="italic">skills</span> with the world
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-center">
+              <Button className="font-normal tracking-widest bg-blue-700">
+                Collaborator List
+              </Button>
+            </CardContent>
+          </div>
+          <div className="md:w-full">
+            <AspectRatio ratio={4 / 3}>
+              <Image
+                src="/hero.jpg"
+                alt="Hero background"
+                layout="fill"
+                sizes="100vw"
+                objectFit="cover"
+              />
+            </AspectRatio>
+          </div>
+        </Card>
+      </section>
+
+      <aside className="mt-8 py-8">
         <div className="max-w-4xl mx-auto container px-4">
+          <h2 className="text-center text-4xl text-brown-900 mb-2 tracking-tight">
+            latest <span className="italic">and</span> greatest
+          </h2>
+          <p className="font-sans font-medium uppercase text-center tracking-wider relative z-10 top-1">
+            <span className="bg-brown-300 text-brown-800 px-4 py-2">
+              on the blog
+            </span>
+          </p>
           <div className="max-w-4xl mx-auto">
             <ScrollArea className="w-full whitespace-nowrap">
-              <div className="flex w-max space-x-4 px-2 py-8">
+              <div className="flex w-max space-x-4 px-2">
                 {posts.map((post: Post, i) => (
                   <Card key={i} className="w-full text-wrap text-sm">
-                    <AspectRatio ratio={16 / 9}>
+                    <AspectRatio ratio={1 / 1}>
                       <Image
                         alt={post.featuredImage.node.altText}
                         layout="fill"
@@ -201,17 +173,17 @@ export default async function Home() {
                         priority={true}
                       />
                     </AspectRatio>
-                    <CardHeader className="text-base hover:underline p-3">
+                    <CardHeader className="text-base hover:underline p-0">
                       <Link href={`/blog/${post.slug}`}>
                         <h2
-                          className="text-lg font-semibold tracking-tight mb-4 text-pretty"
+                          className="pt-1 text-center text-lg font-medium tracking-normal mb-4 text-brown-700 leading-tight"
                           dangerouslySetInnerHTML={{ __html: post.title }}
                         />
                       </Link>
                     </CardHeader>
-                    <CardContent className="text-sm p-3 text-gray-500">
+                    {/* <CardContent className="text-sm p-3 text-gray-500">
                       <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-                    </CardContent>
+                    </CardContent> */}
                   </Card>
                 ))}
               </div>
@@ -221,30 +193,92 @@ export default async function Home() {
         </div>
       </aside>
 
-      {/* Email signup form */}
-      <section className="w-full py-12">
-        <div className="max-w-4xl mx-auto container py-8 px-4 md:px-6 bg-brown-300">
-          <div className="flex flex-col items-center space-y-4 pb-4">
-            <MailOpen size={64} strokeWidth={1} color="white" />
-          </div>
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <h2 className="text-3xl font-light tracking-tight text-brown-900">
-              Subscribe to Our Newsletter
-            </h2>
-            <p className="text-brown-800">no spam ever. we promise.</p>
-            <div className="flex w-full max-w-sm items-center">
-              <Input
-                className="border-none"
-                type="email"
-                placeholder="Enter your email"
-              />
-              <Button
-                className="font-normal tracking-widest bg-brown-900"
-                type="submit"
-              >
-                Subscribe
+      <section className="max-w-4xl mx-auto my-14 container px-4 md:px-6">
+        <Card className="w-full text-wrap text-sm bg-brown-300 flex flex-col md:flex-row">
+          <div className="flex flex-col justify-center md:w-1/3">
+            <CardHeader>
+              <CardTitle className="tracking-tight text-3xl font-light text-center text-brown-900">
+                planning a <br /> <span className="italic">gals night</span> ?
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-center">
+              <Button className="font-normal tracking-widest bg-brown-700">
+                Hatch Hosting Guides
               </Button>
-            </div>
+            </CardContent>
+          </div>
+          <div className="flex flex-col justify-center md:w-2/3">
+            <AspectRatio ratio={4 / 3}>
+              <Image
+                src="/hero.jpg"
+                alt="Hero background"
+                layout="fill"
+                sizes="100vw"
+                objectFit="cover"
+              />
+            </AspectRatio>
+          </div>
+        </Card>
+      </section>
+
+      <section className="max-w-4xl mx-auto my-14 container px-4 md:px-6">
+        <h2 className="text-center text-4xl text-blue-900 mb-2 tracking-tight">
+          hatch hangouts
+        </h2>
+        <Card className="w-full text-wrap text-sm bg-blue-300 flex flex-col">
+          <div className="flex flex-col justify-center md:w-full">
+            <AspectRatio ratio={16 / 6}>
+              <Image
+                src="/hero.jpg"
+                alt="Hero background"
+                layout="fill"
+                sizes="100vw"
+                objectFit="cover"
+              />
+            </AspectRatio>
+          </div>
+          <div className="flex flex-col justify-center md:w-full pt-6">
+            {/* <CardHeader>
+              <CardTitle className="tracking-tight text-3xl font-light text-center text-blue-900">
+                planning a <br /> <span className="italic">gals night</span> ?
+              </CardTitle>
+            </CardHeader> */}
+            <CardContent className="text-sm text-center">
+              <Button className="font-normal tracking-widest bg-blue-700 mx-2">
+                Find a Hangout
+              </Button>
+              <Button className="font-normal tracking-widest bg-blue-700 mx-2">
+                Host a Hangout
+              </Button>
+            </CardContent>
+          </div>
+        </Card>
+      </section>
+
+      {/* Email signup form */}
+      <section className="max-w-4xl mx-auto my-14 container px-4 md:px-6">
+        <div className="flex flex-col items-center space-y-4 p-8 bg-brown-100">
+          <MailOpen size={64} strokeWidth={1} color="white" />
+
+          <h2 className="text-3xl font-light tracking-tight text-brown-900">
+            stay in the know
+          </h2>
+          <p className="text-brown-800">
+            Receive our newsletter and get exclusive content delivered right to
+            your inbox.
+          </p>
+          <div className="flex w-full max-w-sm items-center">
+            <Input
+              className="border-none"
+              type="email"
+              placeholder="Email Address"
+            />
+            <Button
+              className="font-normal tracking-widest bg-brown-900"
+              type="submit"
+            >
+              Add me to the list
+            </Button>
           </div>
         </div>
       </section>
