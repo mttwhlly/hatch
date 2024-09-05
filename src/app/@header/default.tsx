@@ -41,14 +41,7 @@ export default async function Header() {
               {item.node.label}
             </Link>
           ))} */}
-            <div className="p-2 inline-block">
-              <Link
-                href="/about"
-                className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
-              >
-                About
-              </Link>
-            </div>
+
             <div className=" p-2 inline-block">
               <Link
                 href="/community"
@@ -71,6 +64,14 @@ export default async function Header() {
                 className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
               >
                 Blog
+              </Link>
+            </div>
+            <div className="p-2 inline-block">
+              <Link
+                href="/about"
+                className="font-sans uppercase hover:border-b-2 hover:border-b-brown-400 p-1.5"
+              >
+                About
               </Link>
             </div>
             <div className=" p-2 inline-block">

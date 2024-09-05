@@ -55,7 +55,7 @@ export default async function Home() {
       </section>
 
       <section className="max-w-4xl mx-auto my-14 container px-4 md:px-6">
-        <Card className="w-full text-wrap text-sm bg-brown-300 flex flex-col md:flex-row">
+        <Card className="w-full text-wrap text-sm bg-red-100 flex flex-col md:flex-row">
           <div className="flex flex-col justify-center md:w-1/2">
             <AspectRatio ratio={3 / 2}>
               <Image
@@ -69,11 +69,11 @@ export default async function Home() {
           </div>
           <div className="flex flex-col justify-center md:w-1/2">
             <CardHeader>
-              <CardTitle className="tracking-tight text-3xl font-light text-center text-brown-900">
+              <CardTitle className="tracking-tight text-3xl font-light text-center text-red-950">
                 let’s get together <br />{" "}
                 <span className="italic">yeah, yeah, yeah</span>
               </CardTitle>
-              <CardDescription className="text-wrap text-center text-brown-800">
+              <CardDescription className="text-wrap text-red-900">
                 Hatch Creatives is a community of women connecting globally and
                 gathering locally to support, celebrate and create lives we
                 love. Hatch provides space for gals to come together as friends,
@@ -81,7 +81,7 @@ export default async function Home() {
               </CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-center">
-              <Button className="font-normal tracking-widest bg-brown-700">
+              <Button className="font-normal tracking-widest bg-red-950">
                 Upcoming Meetups
               </Button>
             </CardContent>

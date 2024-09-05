@@ -104,7 +104,7 @@ export default async function About() {
                 </CardTitle>
                 <CardDescription className="text-wrap text-center text-brown-800"></CardDescription>
               </CardHeader>
-              <CardContent className="text-sm text-center text-brown-800">
+              <CardContent className="text-sm text-brown-800">
                 <p>
                   We learn new skills, ask for and offer support, and stoke the
                   passions inside us. We celebrate and cheer on the steps and
@@ -122,7 +122,7 @@ export default async function About() {
                 </CardTitle>
                 <CardDescription className="text-wrap text-center text-blue-800"></CardDescription>
               </CardHeader>
-              <CardContent className="text-sm text-center text-blue-800">
+              <CardContent className="text-sm text-blue-800">
                 <p>
                   We engage with other women and discover opportunities to
                   collaborate in new and innovative ventures.
@@ -139,7 +139,7 @@ export default async function About() {
                 </CardTitle>
                 <CardDescription className="text-wrap text-center text-yellow-800"></CardDescription>
               </CardHeader>
-              <CardContent className="text-sm text-center text-yellow-800">
+              <CardContent className="text-sm text-yellow-800">
                 <p>
                   We seek accountability in order to bring our dreams and
                   ambitions to their full potential. We come alongside each
@@ -159,11 +159,11 @@ export default async function About() {
                 origin story
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-sm text-center">
+            <CardContent className="text-sm">
               Hatch Creatives began in 2018 with the goal of creating monthly
               events for women to gather and connect in South Florida. Many gals
               volunteered their hearts, hands, and minds to put on these
-              frequent events. In 2019, Hatch expanded it's reach to a blog and
+              frequent events. In 2019, Hatch expanded it’s reach to a blog and
               continues to be shaped by the growing needs of the Hatch gal
               community.
             </CardContent>
